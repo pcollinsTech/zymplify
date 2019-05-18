@@ -6,8 +6,6 @@ import Seo from "../components/Seo"
 import Hero from "../components/Hero"
 import About from "../components/About"
 import Services from "../components/Services"
-import WhyUs from "../components/WhyUs"
-import Clients from "../components/Clients";
 import News from "../components/News";
 // import Instagram from "../components/Instagram"
 
