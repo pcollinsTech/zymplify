@@ -1,0 +1,47 @@
+
+[
+  {
+    "id": 1,
+    "image": "../../images/services/social.png",
+    "list": [
+      "Community Management",
+      "Content Creation",
+      "Advertising Management",
+      "Account Management",
+      "Influencer Management"
+    ]
+  },
+  {
+    "id": 2,
+    "image": "../../images/services/seo.png",
+    "list": [
+      "Paid Search Advertising",
+      "Re-Marketing",
+      "PPC Audit",
+      "SEO Audit",
+      "Keyword Research"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "../../images/services/content.png",
+    "list": [
+      "Content Strategy",
+      "Content Creation",
+      "Editorial Planning",
+      "Copywriting",
+      "Visual Content Creation"
+    ]
+  },
+  {
+    "id": 4,
+    "image": "../../images/services/workshops.png",
+    "list": [
+      "One-to-one Sessions",
+      "Employee Advocacy Training",
+      "Group Sessions",
+      "Content Creation & Planning",
+      "Social Media Advertising"
+    ]
+  }
+]

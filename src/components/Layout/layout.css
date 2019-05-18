@@ -1,0 +1,11 @@
+.home-header{
+  align-content: center;
+  max-width: 300px;
+  height: 80px;
+}
+.green-bg {
+  background-color: #61AAA4;
+}
+.grey-bg {
+  background-color: #CECECE;
+}
