@@ -17,7 +17,7 @@ class Hero extends Component {
             Zymplify, Europe’s fastest growing Digital Marketing Automation Software Company, moves to Riverhouse Belfast. 
           </p>
         </div>
-        <style jsx>{`
+        <style jsx="true">{`
           .centered {
             position: absolute;
             top: 50%;

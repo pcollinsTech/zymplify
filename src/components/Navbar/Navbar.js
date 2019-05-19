@@ -13,8 +13,7 @@ import './navbar.css';
 import logo from '../../images/logo.png'
 
 const navlink = {
-  color: 'white',
-  fontFamily: 'sans-serif'
+  color: 'black',
 }
 
 
@@ -35,9 +34,10 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <Navbar expand="md" style={{ 
-          backgroundColor: '#61AAA4',
-      }}>
+        <Navbar 
+        className="fixed-top"
+        expand="md" 
+        style={{ backgroundColor: 'white'}}>
         <div className="container">
         
           <div className="row">
