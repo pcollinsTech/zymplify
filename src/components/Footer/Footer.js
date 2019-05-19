@@ -18,7 +18,7 @@ export default () => {
             <div className="container mt-5">
 
             <WhiteLogo/>
-            <p><Link to="/contact">Contact</Link> | <Link to="/legal">Legal</Link> | <Link to="/blog">Blog</Link></p>
+            <p className="page-links"><Link to="/contact">Contact</Link> | <Link to="/legal">Legal</Link> | <Link to="/blog">Blog</Link></p>
             <p>Copyright 2019 Zymplify, Inc</p>
             <div className="font-grey social-links">
               <a href="https://facebook.com/Zymplify/" target="__blank"><FaFacebook /></a>
@@ -31,7 +31,7 @@ export default () => {
         </div>
         <div className="container mt-5">
           <div className="row font-grey">
-            <div className="col-md-3">
+            <div className="col-md-3 mb-3">
               <Promenade/>
               <p>24-27 The Promenade</p>
               <p>Portstewart</p>
@@ -63,12 +63,15 @@ export default () => {
           color: #666666 !important;
           text-align: center;
         }
-        a {
+        .social-links a {
+          margin: 5px;
+          font-size: 25px;
+        }
+        
+        .page-links a,
+        .social-links a {
           color: #666666;
           text-decoration: none;
-        }
-        .social-links {
-          
         }
 
       `}</style>

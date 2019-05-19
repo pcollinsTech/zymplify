@@ -7,9 +7,9 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Button,
 } from 'reactstrap';
 
-import './navbar.css';
 import logo from '../../images/logo.png'
 
 const navlink = {
@@ -33,7 +33,7 @@ export default class Example extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Navbar 
         className="fixed-top"
         expand="md" 
@@ -48,26 +48,33 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#about" style={navlink}>About</NavLink>
+                <NavLink href="#about" className="nav-link">About</NavLink>
+              </NavItem>
+              {/* <NavItem>
+                <NavLink href="#services" className="nav-link">Services</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#services" style={navlink}>Services</NavLink>
+                <NavLink href="#clients" className="nav-link">Our Clients</NavLink>
+              </NavItem> */}
+              <NavItem>
+                <NavLink href="/blog" className="nav-link">Blog</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#clients" style={navlink}>Our Clients</NavLink>
+                <NavLink href="#contact" className="nav-link">Contact</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/newsandviews" style={navlink}>News And Views</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#contact" style={navlink}>Contact</NavLink>
-              </NavItem>
-              
+              <Button color="secondary">Try for Free</Button>
+              <Button color="info">Login</Button>
             </Nav>
           </Collapse>
         </div>
         </Navbar>
-      </div>
+        <style jsx>{`
+          
+          .nav-link{
+            color:black
+          }
+        `}</style>
+      </React.Fragment>
     );
   }
 }
