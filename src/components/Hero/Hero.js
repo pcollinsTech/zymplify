@@ -13,12 +13,14 @@ class Hero extends Component {
       <React.Fragment>
         <div className="hero">
           <img src={hero} style={heroImage} alt="hero" />
-          <p className="centered">
-            Zymplify, Europe’s fastest growing Digital Marketing Automation Software Company, moves to Riverhouse Belfast. 
-          </p>
+          <h1 className="centered">
+            Zymplify<br/> Europe’s fastest growing Digital Marketing Automation Software Company, moves to Riverhouse Belfast. 
+          </h1>
         </div>
         <style jsx="true">{`
           .centered {
+            text-align: center;
+            font-size: 35px;
             position: absolute;
             top: 50%;
             left: 50%;
