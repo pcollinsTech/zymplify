@@ -32,28 +32,20 @@ class IndexPage extends Component {
 
 export default IndexPage
 
-export const indexPostQuery = graphql`
-  {
-    posts: allWordpressPost{
-      edges{
-        node{
-          link
-          wordpress_id
-          id
-          title
-          slug
-          excerpt
-          categories{
-            id
-            name
-            description
-          }
-          date
-          comment_status
-         
-        }
-      }
-      totalCount
-    }
-  }
-`;
+// export const indexPostQuery = graphql`
+//   {
+//     posts: allWordpressPost{
+//       edges{
+//         node{
+//           id
+//           title
+//           excerpt
+//           featured_media {
+//             id
+//             source_url
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
