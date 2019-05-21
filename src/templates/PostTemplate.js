@@ -3,33 +3,41 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Seo from "../components/Seo";
-
+import Article from "../components/Article";
+import Post from "../components/Post";
+import { ThemeContext } from "../layouts";
 
 const PostTemplate = props => {
   const {
     data: {
-      link,
-      wordpress_id,
-      id,
-      title,
-      slug,
-      excerpt,
-      categories: {
-        id,
-        name,
-        description,
-      },
-    date,
-    comment_status
-    }
+      post,
+      authornote: { html: authorNote },
+      site: {
+        siteMetadata: { facebook }
+      }
+    },
+    pageContext: { next, prev }
   } = props;
 
   return (
-    <div>
-      <Seo />
-      <h1>{title}</h1>
-      <p>excerpt</p>
-    </div>
+    <React.Fragment>
+      <ThemeContext.Consumer>
+        {theme => (
+          <Article theme={theme}>
+            <Post
+              post={post}
+              next={next}
+              prev={prev}
+              authornote={authorNote}
+              // facebook={facebook}
+              theme={theme}
+            />
+          </Article>
+        )}
+      </ThemeContext.Consumer>
+
+      <Seo data={post}  />
+    </React.Fragment>
   );
 };
 
@@ -42,22 +50,27 @@ export default PostTemplate;
 
 //eslint-disable-next-line no-undef
 export const postQuery = graphql`
-  query PostById($id: String!) {
-    post: wordpressPost( id: { eq: $id } ) {
-      link
-      wordpress_id
+  query PostBySlug($slug: String!) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      title
-      slug
-      excerpt
-      categories{
-        id
-        name
-        description
+      html
+      excerpt(pruneLength: 250)
+      fields {
+        slug
+        prefix
       }
-      date
-      comment_status
-      
+      frontmatter {
+        title
+        category
+        cover {
+          childImageSharp {
+            resize(width: 300) {
+              src
+            }
+          }
+        }
+      }
     }
+   
   }
 `;

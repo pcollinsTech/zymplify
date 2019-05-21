@@ -49,6 +49,17 @@ module.exports = {
         protocol: "https",
         hostingWPCOM: false,
         useACF: true,
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/media",
+        ],
+        excludedRoutes: [
+          "**/acf",
+          "**/options",
+          "**/yoast",
+
+        ],
       },
     },
     `gatsby-plugin-offline`,

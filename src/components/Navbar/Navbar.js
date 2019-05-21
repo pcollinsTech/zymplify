@@ -12,10 +12,6 @@ import {
 
 import logo from '../../images/logo.png'
 
-const navlink = {
-  color: 'black',
-}
-
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -62,14 +58,14 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink href="#contact" className="nav-link">Contact</NavLink>
               </NavItem>
-              <Button color="secondary">Try for Free</Button>
-              <Button color="info">Login</Button>
+              <Button color="secondary"><a href="https://zymplify.com/register.php" target="__blank">Try for Free</a></Button>
+              <Button color="info"><a href="https://zymplify.com/client-area/" target="__blank">Login</a></Button>
             </Nav>
           </Collapse>
         </div>
         </Navbar>
         <style jsx>{`
-          
+
           .nav-link{
             color:black
           }
