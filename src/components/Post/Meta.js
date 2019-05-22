@@ -6,7 +6,7 @@ import { FaCalendar } from "react-icons/fa/";
 import { FaTag } from "react-icons/fa/";
 
 const Meta = props => {
-  const { prefix, author: authorName, category } = props;
+  const { prefix,  category } = props;
 
   return (
     <p className="meta">

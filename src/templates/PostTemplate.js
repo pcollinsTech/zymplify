@@ -10,7 +10,6 @@ class PostTemplate extends Component {
   render() {
 
     const post = this.props.data.wordpressPost
-    console.log("Post", post)
 
     return (
       <React.Fragment>

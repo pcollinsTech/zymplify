@@ -8,7 +8,6 @@ import React from "react";
 import theme from '../../theme/theme.yaml'
 const Item = props => {
 
-  console.log("Item", props)
   const {
     post: {
       excerpt,

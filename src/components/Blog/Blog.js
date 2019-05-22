@@ -5,7 +5,6 @@ import Item from "./Item";
 
 const Blog = props => {
   const { posts } = props;
-  console.log("Blog", posts)
   if(posts.length <= 3) {
     return (
       <React.Fragment>

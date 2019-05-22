@@ -21,7 +21,6 @@ class IndexPage extends Component {
     } = this.props
     
     const filteredPosts = posts.slice(0, 3);
-    console.log("INDEX RENDER", filteredPosts)
     return (
       <React.Fragment>
         <Layout>
