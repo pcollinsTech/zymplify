@@ -16,11 +16,7 @@ const London = () => (
       }
     `}
     render={data => {
-      console.log("data", data)
-      return (
-
-        <Img fixed={data.placeholderImage.childImageSharp.fixed} />
-      )
+      return <Img fixed={data.placeholderImage.childImageSharp.fixed} />
     }}
   />
 )

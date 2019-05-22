@@ -47,23 +47,17 @@
 //              allWordpressPost{
 //               edges{
 //                 node{
-//                   link
 //                   wordpress_id
 //                   id
 //                   title
 //                   slug
-//                   excerpt
 //                   categories{
 //                     id
 //                     name
 //                     description
 //                   }
-//                   date
-//                   comment_status
-//                   author'
 //                 }
 //               }
-//               totalCount
 //             }
 //           }
 //         `
@@ -75,7 +69,7 @@
 
 
 //         // Create posts
-//         edges.forEach(({ node }, index) => {
+//         result.edges.forEach(({ node }, index) => {
 //           const slug = node.slug;
 
 //           createPage({
@@ -93,19 +87,19 @@
 //   });
 // };
 
-// exports.onCreateWebpackConfig = ({ stage, actions }, options) => {
-//   switch (stage) {
-//     case `build-javascript`:
-//       actions.setWebpackConfig({
-//         plugins: [
-//           new BundleAnalyzerPlugin({
-//             analyzerMode: "static",
-//             reportFilename: "./report/treemap.html",
-//             openAnalyzer: true,
-//             logLevel: "error",
-//             defaultSizes: "gzip"
-//           })
-//         ]
-//       });
-//   }
-// };
+// // exports.onCreateWebpackConfig = ({ stage, actions }, options) => {
+// //   switch (stage) {
+// //     case `build-javascript`:
+// //       actions.setWebpackConfig({
+// //         plugins: [
+// //           new BundleAnalyzerPlugin({
+// //             analyzerMode: "static",
+// //             reportFilename: "./report/treemap.html",
+// //             openAnalyzer: true,
+// //             logLevel: "error",
+// //             defaultSizes: "gzip"
+// //           })
+// //         ]
+// //       });
+// //   }
+// // };

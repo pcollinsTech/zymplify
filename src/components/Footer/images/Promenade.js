@@ -16,7 +16,7 @@ const Promenade = () => (
       }
     `}
     render={data => {
-      console.log("data", data)
+
       return (
 
         <Img fixed={data.placeholderImage.childImageSharp.fixed} />

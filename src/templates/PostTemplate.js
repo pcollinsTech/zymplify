@@ -1,76 +1,38 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { graphql } from "gatsby";
 
-import Seo from "../components/Seo";
-import Article from "../components/Article";
-import Post from "../components/Post";
-import { ThemeContext } from "../layouts";
+// import React, { Component } from "react"
+// import { graphql } from 'graphql'
 
-const PostTemplate = props => {
-  const {
-    data: {
-      post,
-      authornote: { html: authorNote },
-      site: {
-        siteMetadata: { facebook }
-      }
-    },
-    pageContext: { next, prev }
-  } = props;
+// import Seo from "../components/Seo";
+// import Article from "../components/Article";
+// import Post from "../components/Post";
 
-  return (
-    <React.Fragment>
-      <ThemeContext.Consumer>
-        {theme => (
-          <Article theme={theme}>
-            <Post
-              post={post}
-              next={next}
-              prev={prev}
-              authornote={authorNote}
-              // facebook={facebook}
-              theme={theme}
-            />
-          </Article>
-        )}
-      </ThemeContext.Consumer>
+// class PostTemplate extends Component {
+//   render() {
 
-      <Seo data={post}  />
-    </React.Fragment>
-  );
-};
+//     const post = this.props.data.wordpressPost
+//     console.log("Post", post)
 
-PostTemplate.propTypes = {
-  data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired
-};
-
-export default PostTemplate;
-
-// //eslint-disable-next-line no-undef
-// export const postQuery = graphql`
-//   query PostBySlug($slug: String!) {
-//     post: markdownRemark(fields: { slug: { eq: $slug } }) {
-//       id
-//       html
-//       excerpt(pruneLength: 250)
-//       fields {
-//         slug
-//         prefix
-//       }
-//       frontmatter {
-//         title
-//         category
-//         cover {
-//           childImageSharp {
-//             resize(width: 300) {
-//               src
-//             }
-//           }
-//         }
-//       }
-//     }
-   
+//     return (
+//       <React.Fragment>
+//         <Article>
+//           <Post
+//             post={post}
+//           />
+//         </Article>
+//         <Seo data={post} />
+//       </React.Fragment>
+//     )
 //   }
-// `;
+// }
+
+
+// export default PostTemplate
+
+// export const pageQuery = graphql`
+//     query currentPostQuery($id: String!) {
+//         wordpressPost(id: { eq: $id }) {
+//             title
+//             content
+//         }
+       
+//     }`;

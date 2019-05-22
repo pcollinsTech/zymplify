@@ -46,27 +46,29 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink href="#about" className="nav-link">About</NavLink>
               </NavItem>
-              {/* <NavItem>
-                <NavLink href="#services" className="nav-link">Services</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#clients" className="nav-link">Our Clients</NavLink>
-              </NavItem> */}
               <NavItem>
                 <NavLink href="/blog" className="nav-link">Blog</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="#contact" className="nav-link">Contact</NavLink>
               </NavItem>
-              <Button color="secondary"><a href="https://zymplify.com/register.php" target="__blank">Try for Free</a></Button>
-              <Button color="info"><a href="https://zymplify.com/client-area/" target="__blank">Login</a></Button>
+              <Button color="secondary"><a href="https://zymplify.com/register.php" target="__blank" className="button-link">Try for Free</a></Button>
+              <Button color="info"><a href="https://zymplify.com/client-area/" target="__blank" className="button-link">Login</a></Button>
             </Nav>
           </Collapse>
         </div>
         </Navbar>
-        <style jsx>{`
-
+        <style jsx="true">{`
+          .btn {
+            margin: 0 7px;
+            border-radius: 10px;
+          }
+          .btn a{
+            color: white;
+            
+          }
           .nav-link{
+            text-decoration: none;
             color:black
           }
         `}</style>
