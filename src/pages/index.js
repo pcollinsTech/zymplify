@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Layout from "../components/Layout"
 // import Seo from "../components/Seo"
 import Hero from "../components/Hero"
-// import Blog from "../components/Blog"
+import Blog from "../components/Blog"
 
 
 
@@ -14,27 +14,42 @@ class IndexPage extends Component {
 
   
   render() {
-    console.log("INDEX RENDER", this.props)
-    // const {
-      
-    // } = this.props
+    const {
+      data: {
+        posts: { edges: posts = [] },
+      }
+    } = this.props
+    
+    const filteredPosts = posts.slice(0, 3);
+    console.log("INDEX RENDER", filteredPosts)
     return (
       <React.Fragment>
         <Layout>
           {/* <Seo title="Home" keywords={[`gatsby`, `application`, `react`]} /> */}
           <Hero />
-          {/* <Blog post={posts} /> */}
+          <Blog posts={filteredPosts} />
           <div className="container home-content">
             <div className="row">
               <div className="col-md-6">
                 <h2>Zymplify moves to Riverhouse, white it does for us!</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et quam maiores officia? Eaque omnis quae repellat atque officiis officia laudantium nobis mollitia unde? Ab minus ea officia dolorem esse adipisci.</p>
+                <p>
+                  Moving into the centre of Belfast, Zymplify is able to integrate more connectively with the
+                  Belfast Business Ecosystem. River House Belfast allows us a great place to allow our clients
+                  to meet us and a great place for our employees to work in.
+                </p>
               </div>
               <div className="col-md-6">
                 <img src="../../images/logo.png" alt="alt tag"/>
               </div>
             </div>
             <div className="row mt-5">
+              <h3>What does Zymplify do?</h3>
+              <p>
+                Zymplify is a Digital Marketing Automation Software Platform which allows your marketing
+                teams to operate all functions of the digital marketing process together. Create full marketing
+                campaigns, monitor the ROI of each campaign, manage all your PPC campaigns and Email
+                Marketing within one place. You have full control of all things Digital Marketing.
+              </p>
               <div className="col-md-3">
                 <h5>Email Marketing</h5>
                 <p>THis is some radnoemr filler txt that needs to be replaced</p>
@@ -140,20 +155,21 @@ IndexPage.propTypes = {
 };
 export default IndexPage
 
-// export const query = graphql`
-//   query IndexQuery {
-//       posts: allWordpressPost{
-//       edges {
-//         node {
-//           id
-//           title
-//           excerpt
-//           featured_media {
-//             id
-//             source_url
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export const query = graphql`
+  query IndexQuery {
+      posts: allWordpressPost{
+      edges {
+        node {
+          id
+          title
+          excerpt
+          slug
+          featured_media {
+            id
+            source_url
+          }
+        }
+      }
+    }
+  }
+`;

@@ -50,7 +50,7 @@ export default class Example extends React.Component {
                 <NavLink href="/blog" className="nav-link">Blog</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#contact" className="nav-link">Contact</NavLink>
+                <NavLink href="/contact" className="nav-link">Contact</NavLink>
               </NavItem>
               <Button color="secondary"><a href="https://zymplify.com/register.php" target="__blank" className="button-link">Try for Free</a></Button>
               <Button color="info"><a href="https://zymplify.com/client-area/" target="__blank" className="button-link">Login</a></Button>

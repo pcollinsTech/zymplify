@@ -7,17 +7,13 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const Item = props => {
+
+  console.log("Item", props)
   const {
     post: {
       excerpt,
-      fields: { slug, prefix },
-      frontmatter: {
-        title,
-        category,
-        cover: {
-          children: [{ fluid }]
-        }
-      }
+      slug,
+            
     }
   } = props;
 
@@ -25,22 +21,20 @@ const Item = props => {
     <React.Fragment>
       <div className="item">
         <Link to={slug} key={slug} className="link">
-          <div className="gatsby-image-outer-wrapper">
-            <Img fluid={fluid} />
-          </div>
+          
           <h2>
             {title} <FaArrowRight className="arrow" />
           </h2>
           <p className="meta">
             <span>
-              <FaCalendar size={18} /> {prefix}
+              {/* <FaCalendar size={18} /> {prefix} */}
             </span>
            
-            {category && (
+            {/* {category && (
               <span>
                 <FaTag size={18} /> {category}
               </span>
-            )}
+            )} */}
           </p>
           <p>{excerpt}</p>
         </Link>
