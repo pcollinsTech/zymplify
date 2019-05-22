@@ -1,11 +1,11 @@
 import { FaArrowRight } from "react-icons/fa/";
-import { FaCalendar } from "react-icons/fa/";
-import { FaTag } from "react-icons/fa/";
-import Img from "gatsby-image";
+// import { FaCalendar } from "react-icons/fa/";
+// import { FaTag } from "react-icons/fa/";
+// import Img from "gatsby-image";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
-
+import theme from '../../theme/theme.yaml'
 const Item = props => {
 
   console.log("Item", props)
@@ -13,7 +13,7 @@ const Item = props => {
     post: {
       excerpt,
       slug,
-            
+      title
     }
   } = props;
 
@@ -41,7 +41,7 @@ const Item = props => {
       </div>
 
       {/* --- STYLES --- */}
-      {/* <style jsx>{`
+      <style jsx>{`
         :global(.link) {
           width: 100%;
           color: ${theme.text.color.primary};
@@ -204,7 +204,7 @@ const Item = props => {
             }
           }
         }
-      `}</style> */}
+      `}</style>
     </React.Fragment>
   );
 };
