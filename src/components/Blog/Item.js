@@ -6,8 +6,10 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import theme from '../../theme/theme.yaml'
-const Item = props => {
 
+
+const Item = props => {
+  
   const {
     post: {
       excerpt,
@@ -15,7 +17,11 @@ const Item = props => {
       title
     }
   } = props;
-
+  
+  const createMarkup = () => {
+    return { __html: excerpt };
+  }
+  
   return (
     <React.Fragment>
       <div className="item">
@@ -35,7 +41,7 @@ const Item = props => {
               </span>
             )} */}
           </p>
-          <p>{excerpt}</p>
+          <div dangerouslySetInnerHTML={createMarkup()}/>
         </Link>
       </div>
 

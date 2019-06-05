@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import theme from '../../theme/theme.yaml'
 
 const Article = props => {
   const { children } = props;
@@ -9,7 +10,7 @@ const Article = props => {
       <article className="article">{children}</article>
 
       {/* --- STYLES --- */}
-      {/* <style jsx>{`
+      <style jsx>{`
         .article {
           padding: ${theme.space.inset.default};
           margin: 0 auto;
@@ -28,7 +29,7 @@ const Article = props => {
             max-width: ${theme.text.maxWidth.desktop};
           }
         }
-      `}</style> */}
+      `}</style>
     </React.Fragment>
   );
 };
