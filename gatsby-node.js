@@ -10,19 +10,19 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   
-      return graphql(`
-        {
-          allWordpressPost {
+  return graphql(`
+    query {
+        allWordpressPost {
             edges {
-              node {
-                id
-                slug
-                status
-              }
+                node {
+                    id
+                    slug
+                    status
+                }
             }
-          }
         }
-      `)
+    }
+  ` )
     .then(result => {
       if (result.errors) {
         result.errors.forEach(e => console.error(e.toString()))
@@ -34,19 +34,20 @@ exports.createPages = ({ actions, graphql }) => {
 
       // In production builds, filter for only published posts.
       const allPosts = result.data.allWordpressPost.edges
-      const posts =
-        process.env.NODE_ENV === 'production'
-          ? getOnlyPublished(allPosts)
-          : allPosts
+      // const posts =
+      //   process.env.NODE_ENV === 'production'
+      //     ? getOnlyPublished(allPosts)
+      //     : allPosts
 
       // Iterate over the array of posts
-      _.each(posts, ({ node: post }) => {
+      _.each(allPosts, ({ node: post }) => {
         // Create the Gatsby page for this WordPress post
         createPage({
           path: `/${post.slug}/`,
           component: postTemplate,
           context: {
             id: post.id,
+            slug: post.slug
           },
         })
       })
@@ -131,49 +132,5 @@ exports.createPages = ({ actions, graphql }) => {
     //     })
     //   })
     // })
-    // .then(() => {
-    //   return graphql(`
-    //     {
-    //       allWordpressWpUsers {
-    //         edges {
-    //           node {
-    //             id
-    //             slug
-    //           }
-    //         }
-    //       }
-    //     }
-    //   `)
-    // })
-    // .then(result => {
-    //   if (result.errors) {
-    //     result.errors.forEach(e => console.error(e.toString()))
-    //     return Promise.reject(result.errors)
-    //   }
-
-    //   const authorTemplate = path.resolve(`./src/templates/author.js`)
-
-    //   _.each(result.data.allWordpressWpUsers.edges, ({ node: author }) => {
-    //     createPage({
-    //       path: `/author/${author.slug}`,
-    //       component: authorTemplate,
-    //       context: {
-    //         id: author.id,
-    //       },
-    //     })
-    //   })
-    // })
-}
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
-  }
+   
 }

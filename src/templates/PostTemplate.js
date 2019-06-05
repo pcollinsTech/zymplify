@@ -1,25 +1,26 @@
 
 import React, { Component } from "react"
-import { graphql } from 'graphql'
+import { graphql } from 'gatsby'
 
 import Seo from "../components/Seo";
 import Article from "../components/Article";
 import Post from "../components/Post";
+import Layout from '../components/Layout'
 
 class PostTemplate extends Component {
   render() {
-
+    
     const post = this.props.data.wordpressPost
 
     return (
-      <React.Fragment>
+      <Layout>
         <Article>
           <Post
             post={post}
           />
         </Article>
         <Seo data={post} />
-      </React.Fragment>
+      </Layout>
     )
   }
 }
@@ -27,11 +28,16 @@ class PostTemplate extends Component {
 
 export default PostTemplate
 
-export const pageQuery = graphql`
-    query currentPostQuery($id: String!) {
-        wordpressPost(id: { eq: $id }) {
-            title
-            content
-        }
-       
-    }`;
+export const query = graphql`
+  query($slug: String!) {
+     wordpressPost(slug: { eq: $slug }) {
+      date
+      title
+      slug
+      content
+      categories {
+        name
+      }
+    }    
+  }
+`;

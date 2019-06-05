@@ -53,6 +53,7 @@ const Item = props => {
           transition: all ${theme.time.duration.default};
           background: transparent;
           width:360px;
+          padding: 40px;
           h2{
             margin-top: 15px;
           }

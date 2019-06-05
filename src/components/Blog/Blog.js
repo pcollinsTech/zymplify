@@ -8,13 +8,14 @@ const Blog = props => {
   if(posts.length <= 3) {
     return (
       <React.Fragment>
-        <Headline title="Blog" />
-        <h3>Some of my most recent posts</h3>
-        <div>
-          {posts.map(post => {
-            const { node } = post;
-            return <Item key={node.slug} post={node} />;
-          })}
+        <div className="container">
+          <Headline title="Blog" />
+          <div>
+            {posts.map(post => {
+              const { node } = post;
+              return <Item key={node.slug} post={node} />;
+            })}
+          </div>
         </div>
         
       </React.Fragment>
@@ -22,14 +23,23 @@ const Blog = props => {
   } else {
     return (
       <React.Fragment>
-        <Headline title="Blog"  />
-        <div>
-          {posts.map(post => {
-            const { node } = post;
-            return <Item key={node.slug} post={node} />;
-          })}
+        <div className="container">
+          <Headline title="Blog"  />
+          <div className="blog">
+            {posts.map(post => {
+              const { node } = post;
+              return <Item key={node.slug} post={node} />;
+            })}
+          </div>
         </div>
-        
+        <style jsx="true">{`
+          .blog {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          
+        `}</style>
       </React.Fragment>
     )
   }
