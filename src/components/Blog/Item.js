@@ -1,11 +1,12 @@
 import { FaArrowRight } from "react-icons/fa/";
-// import { FaCalendar } from "react-icons/fa/";
+import { FaCalendar } from "react-icons/fa/";
 // import { FaTag } from "react-icons/fa/";
 // import Img from "gatsby-image";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import theme from '../../theme/theme.yaml'
+import moment from 'moment'
 
 
 const Item = props => {
@@ -14,13 +15,11 @@ const Item = props => {
     post: {
       excerpt,
       slug,
-      title
+      title,
+      date
     }
   } = props;
   
-  const createMarkup = () => {
-    return { __html: excerpt };
-  }
   
   return (
     <React.Fragment>
@@ -32,7 +31,7 @@ const Item = props => {
           </h2>
           <p className="meta">
             <span>
-              {/* <FaCalendar size={18} /> {prefix} */}
+              <FaCalendar size={18} /> {moment(date).format("MMM Do YY")}
             </span>
            
             {/* {category && (
@@ -41,19 +40,24 @@ const Item = props => {
               </span>
             )} */}
           </p>
-          <div dangerouslySetInnerHTML={createMarkup()}/>
+          <div dangerouslySetInnerHTML={{ __html: excerpt }}/>
         </Link>
       </div>
 
       {/* --- STYLES --- */}
-      <style jsx>{`
+      <style jsx="true">{`
+          a {
+            text-decoration: none !important;
+            color: black !important;
+          }
+
         :global(.link) {
           width: 100%;
           color: ${theme.text.color.primary};
         }
        
         .item {
-          border: 1px solid transparent;
+          border: 1px solid #f4f4f4;
           border-radius: ${theme.size.radius.default};
           margin: 0 auto 15px auto;
           transition: all ${theme.time.duration.default};
@@ -63,9 +67,10 @@ const Item = props => {
           h2{
             text-decoration: none;
             margin-top: 15px;
+            color: black !important;
           }
           p{
-
+            color: black !important;
             text-decoration: none;
           }
           :global(.gatsby-image-outer-wrapper) {
@@ -120,6 +125,7 @@ const Item = props => {
           font-size: 0.8em;
           padding: ${theme.space.m} ${theme.space.s};
           background: transparent;
+          align-content: center;
 
           :global(svg) {
             fill: ${theme.icon.color};
@@ -138,36 +144,6 @@ const Item = props => {
           padding: 0 ${theme.space.s};
           text-remove-gap: both;
         }
-
-        @from-width tablet {
-          .item {
-            padding: ${theme.space.default};
-            width:325px;
-
-            &::after {
-              bottom: ${`calc(${theme.space.default} * -2)`};
-            }
-
-            &:first-child {
-              &::before {
-                top: ${`calc(${theme.space.default} * -1.75)`};
-              }
-            }
-          }
-
-          h2 {
-            font-size: ${`calc(${theme.blog.h1.size} * 1.2)`};
-            padding: ${`calc(${theme.space.default} * 1.5) ${theme.space.default} 0`};
-            transition: all 0.5s;
-          }
-          .meta {
-            padding: ${`calc(${theme.space.m} * 1.5) ${theme.space.m}`};
-          }
-          p {
-            padding: 0 ${theme.space.default};
-          }
-        }
-        @from-width desktop {
           .item {
             padding: 0 0 ${`calc(${theme.space.default} * 2)`};
             width:360px;
@@ -214,7 +190,6 @@ const Item = props => {
               transform: translateX(-50%);
             }
           }
-        }
       `}</style>
     </React.Fragment>
   );

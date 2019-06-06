@@ -17,6 +17,7 @@
     "gatsby-source-wordpress": "^3.0.58",
     "gatsby-transformer-sharp": "^2.1.19",
     "global": "^4.3.2",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

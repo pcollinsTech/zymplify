@@ -10,6 +10,7 @@ const Blog = props => {
       <React.Fragment>
         <div className="container">
           <Headline title="Blog" />
+          <p>Some of our latest posts</p>
           <div className="blog">
             {posts.map(post => {
               const { node } = post;
@@ -23,7 +24,9 @@ const Blog = props => {
             justify-content: space-between;
             
           }
-
+          p{
+            text-align: center;
+          }
           
         `}</style>
       </React.Fragment>
