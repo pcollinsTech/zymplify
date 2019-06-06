@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Hero from "../Images/RiverhouseBelfast/HeroImage.js"
+import HeroImage from "../Images/RiverhouseBelfast/HeroImage.js"
 
 class Hero extends Component {
 
@@ -8,7 +8,7 @@ class Hero extends Component {
     return (
       <React.Fragment>
         <div className="hero">
-          <Hero />
+          <HeroImage />
           <h1 className="centered">
             Zymplify<br/> Europe’s fastest growing Digital Marketing Automation Software Company, moves to Riverhouse Belfast. 
           </h1>
