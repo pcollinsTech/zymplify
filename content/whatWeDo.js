@@ -21,7 +21,7 @@ module.exports = {
       ]
     },
       {
-      title: "Mobile Marketing,",
+      title: "Mobile Marketing",
       description: "Connect with your already connected Leads. Build Mobile Optimized campaigns and allow for SMS interaction.",
 
       list: [

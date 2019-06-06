@@ -24,7 +24,7 @@ const Item = props => {
   
   return (
     <React.Fragment>
-      <div className="item">
+      <div className="item col-md-4">
         <Link to={slug} key={slug} className="link">
           
           <h2>

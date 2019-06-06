@@ -41,7 +41,7 @@ class IndexPage extends Component {
             <div className="container mt-5 mb-5">
               <div className="row">
                 <div className="col-md-6">
-                  <h2>Zymplify moves to Riverhouse, white it does for us!</h2>
+                  <h2 className="mt-4 mb-5">Zymplify moves to Riverhouse, white it does for us!</h2>
                   <p>
                     Moving into the centre of Belfast, Zymplify is able to integrate more connectively with the
                     Belfast Business Ecosystem. River House Belfast allows us a great place to allow our clients
@@ -64,39 +64,59 @@ class IndexPage extends Component {
                   campaigns, monitor the ROI of each campaign, manage all your PPC campaigns and Email
                   Marketing within one place. You have full control of all things Digital Marketing.
                 </p>
-                {items.items.map(item => {
-                  return <Collapse 
-                        title={item.title}
-                        description={item.description}
-                        list={item.list}
-                        />
-                })}
+                <div className="accords mx-auto">
+                  {items.items.map(item => {
+                    return <Collapse 
+                          title={item.title}
+                          description={item.description}
+                          list={item.list}
+                          />
+                  })}
+
+                </div>
               </div>
             </div>
           </section>
          <div className="row">
-            <div className="container">
-              <h2>What does Zymplify off to Belfast</h2>
-              <p>
-                From Riverhouse Belfast, Zymplify offers a free marketing consultation which aims to identify
-                digital marketing mistakes being made. Zymplify then aims to be able to offer a solution using
-                our Digital Marketing Platform and explain how the platform can correct the problems and
-                expand the businesses Digital Marketing endeavours.
-                  </p>
-            </div>
-            <div className="row mt-5">
-              <h2>Belfast Marketing Digital Agencies</h2>
-              <p>
-                Zymplify allows Digital Marketing Agencies to use our own software to Market to other companies.
-                If your business is interested in using Zymplify to be your digital marketing software platform,
-                contact us and we’ll get in touch! Find out more about our Digital Marketing offerings to Digital
-                Marketing Agencies here.
-              </p>
+            <div className="container mt-5 mb-5 bottom">
+              <div className="col-md-6">
+                <h2 className="mb-5">What does Zymplify off to Belfast</h2>
+                <p>
+                  From Riverhouse Belfast, Zymplify offers a free marketing consultation which aims to identify
+                  digital marketing mistakes being made. Zymplify then aims to be able to offer a solution using
+                  our Digital Marketing Platform and explain how the platform can correct the problems and
+                  expand the businesses Digital Marketing endeavours.
+                </p>
+              </div>
+              <div className="col-md-6">
+                <h2 className="mb-5">Belfast Marketing Digital Agencies</h2>
+                <p>
+                  Zymplify allows Digital Marketing Agencies to use our own software to Market to other companies.
+                  If your business is interested in using Zymplify to be your digital marketing software platform,
+                  contact us and we’ll get in touch! Find out more about our Digital Marketing offerings to Digital
+                  Marketing Agencies here.
+                </p>
+              </div>
             </div>
          </div>
-        <Blog posts={filteredPosts} />
+         <div className="row">
+            <Blog posts={filteredPosts} />
+         </div>
         </Layout>
         <style jsx="true">{`
+          .bottom{
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+
+          }
+          .accords{
+            width: 100%;
+            margin: 10px auto;
+            margin-bottom: 20px;
+            content
+
+          }
           .orange{ 
             background-color: #FFCC80;
             text-align: center;

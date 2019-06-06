@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse } from 'reactstrap';
+import { FaArrowRight } from "react-icons/fa/";
 
 class Example extends Component {
   constructor(props) {
@@ -14,19 +15,49 @@ class Example extends Component {
 
   render() {
     return (
-      <div className="col-md-3">
-        <div onClick={this.toggle} className="item">
-          <h4 color="primary" style={{ marginBottom: '1rem' }}>{this.props.title}</h4>
-          <p>{this.props.description}</p>
+      <React.Fragment>
+        <div className="accord">
+
+          <div onClick={this.toggle}>
+             
+            <h4 color="primary" style={{ marginBottom: '1rem' }}>
+            {this.props.title}    
+            <FaArrowRight className="arrow" />
+            </h4>
+            <p>{this.props.description}</p>
+          </div>
+          <Collapse isOpen={this.state.collapse}>
+            <ul>
+              {this.props.list.map(item => {
+                return <li>{item}</li>
+              })}
+            </ul>
+          </Collapse>
         </div>
-        <Collapse isOpen={this.state.collapse}>
-          <ul>
-            {this.props.list.map(item => {
-              return <li>{item}</li>
-            })}
-          </ul>
-        </Collapse>
-      </div>
+        <style jsx="true">{`
+          .plus{
+            
+          }
+          .accord{
+            width: 80%;
+            padding: 10px;
+            border: 1px #525D7D solid;
+            cursor: pointer;
+            background-color: #f3f3f3;
+            margin: 5px;
+
+            ul{
+              background: color: white;
+            }
+          }
+          li{
+            list-style: none;
+            padding: 5px;
+          }
+        `}
+        </style>
+
+      </React.Fragment>
     );
   }
 }
