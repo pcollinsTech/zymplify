@@ -45,7 +45,7 @@ const Item = props => {
       </div>
 
       {/* --- STYLES --- */}
-      <style jsx="true">{`
+      <style jsx>{`
           a {
             text-decoration: none !important;
             color: black !important;
@@ -53,7 +53,7 @@ const Item = props => {
 
         :global(.link) {
           width: 100%;
-          color: ${theme.text.color.primary};
+          
         }
        
         .item {
