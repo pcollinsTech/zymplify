@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import hero from '../../images/50009502_2242236916019618_7563559900723281920_o.jpg'
-
+import Hero from "../Images/Hero"
 const heroImage = {
   width: "100%"
 }
@@ -12,7 +12,7 @@ class Hero extends Component {
     return (
       <React.Fragment>
         <div className="hero">
-          <img src={hero} style={heroImage} alt="hero" />
+          <Hero />
           <h1 className="centered">
             Zymplify<br/> Europe’s fastest growing Digital Marketing Automation Software Company, moves to Riverhouse Belfast. 
           </h1>
