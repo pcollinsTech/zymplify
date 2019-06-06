@@ -70,7 +70,7 @@ export default () => {
         
         .page-links a,
         .social-links a {
-          color: #666666;
+          color: #666666 !important;
           text-decoration: none;
         }
 
