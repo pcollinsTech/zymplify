@@ -41,11 +41,19 @@ class IndexPage extends Component {
             <div className="container mt-5 mb-5">
               <div className="row">
                 <div className="col-md-6">
-                  <h2 className="mt-4 mb-5">Zymplify moves to Riverhouse, white it does for us!</h2>
+                  <h2 className="mt-4 mb-5">Zymplify moves to Riverhouse, what it does for us!</h2>
                   <p>
-                    Moving into the centre of Belfast, Zymplify is able to integrate more connectively with the
-                    Belfast Business Ecosystem. River House Belfast allows us a great place to allow our clients
-                    to meet us and a great place for our employees to work in.
+                    By moving into the centre of Belfast, Zymplify is able to better connect with the Belfast
+                    Business Ecosystem. River House Belfast allows us a great place to allow our clients to
+                    meet us and a great place for our employees to work in. River House Belfast also allows
+                    Zymplify to create more relationships with up and coming businesses which operate in River
+                    House and also established businesses. With our own offices and the brilliant client spaces,
+                    Zymplify can now offer a more robust Digital Marketing Automation consultation service than
+                    ever before.
+                  </p>
+                  <p>
+                    With this move, Zymplify positions itself as the number one Digital Marketing Automation
+                    Software for Northern Ireland.
                   </p>
                 </div>
                 <div className="col-md-6">
@@ -59,10 +67,28 @@ class IndexPage extends Component {
               <div className="row mt-5 ">
                 <h3 className="mx-auto mt-3 mb-5">What does Zymplify do?</h3>
                 <p className="mb-5">
-                  Zymplify is a Digital Marketing Automation Software Platform which allows your marketing
-                  teams to operate all functions of the digital marketing process together. Create full marketing
-                  campaigns, monitor the ROI of each campaign, manage all your PPC campaigns and Email
-                  Marketing within one place. You have full control of all things Digital Marketing.
+                  Zymplify is a Digital Marketing Automation Software Platform, which allows your marketing
+                  and sales teams, to operate all the functions of the digital marketing process together.
+                  Instead of having to manage many different marketing programs that don’t work together,
+                  Zymplify brings it all in one place.
+                </p>
+                <p>
+                  You’ll be able to create full multichannel marketing campaigns, monitoring the ROI of each
+                  and every campaign created for optimization and manage all your PPC and Email Marketing
+                  Campaigns within one place to name a few things. You have absolutely full control of all
+                  things Multichannel Digital Marketing. The advantages of having Zymplify all in one place is
+                  that you don’t need to juggle the integrations of your marketing process.
+                </p>
+                <p>
+                  Zymplify offers intergraded marketing features which allow you to market to prospects and
+                  leads no matter what marketing channel they’re on. May it be through an email, social media
+                  or a site that the user likes to visit, Zymplify allows you to create any number of sales funnel
+                  processes through customer journeys and automate how you nurture with that customer to
+                  conversion.
+                </p>
+                <p>
+                  Zymplify offers all these marketing solutions in one platform at the industry’s most
+                  aggressively placed prices: £300 per month.
                 </p>
                 <div className="accords mx-auto">
                   {items.items.map(item => {
