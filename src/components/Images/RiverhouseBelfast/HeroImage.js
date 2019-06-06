@@ -8,7 +8,7 @@ const HeroImage = () => (
       query {
         placeholderImage: file(relativePath: { eq: "50009502_2242236916019618_7563559900723281920_o.jpg" }) {
           childImageSharp {
-            fixed(width: 2000) {
+            fixed(width: 1920) {
               ...GatsbyImageSharpFixed
             }
           }
