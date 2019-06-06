@@ -24,8 +24,9 @@ class Example extends Component {
             {this.props.title}    
             <FaArrowRight className="arrow" />
             </h4>
-            <p>{this.props.description}</p>
+            
           </div>
+          <p className="mt-3 mb-3">{this.props.description}</p>
           <Collapse isOpen={this.state.collapse}>
             <ul>
               {this.props.list.map(item => {
