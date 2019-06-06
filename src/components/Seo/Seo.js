@@ -35,8 +35,8 @@ function Seo({ description, lang, meta, keywords, title }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
-          name: `description`,
-          content: metaDescription,
+          name: `robots`,
+          content: "noindex",
         },
         {
           property: `og:title`,
