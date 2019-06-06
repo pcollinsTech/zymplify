@@ -108,9 +108,9 @@ class IndexPage extends Component {
               <div className="col-md-6">
                 <h2 className="mb-5">What does Zymplify off to Belfast</h2>
                 <p>
-                  From Riverhouse Belfast, Zymplify offers a free marketing consultation which aims to identify
-                  digital marketing mistakes being made. Zymplify then aims to be able to offer a solution using
-                  our Digital Marketing Platform and explain how the platform can correct the problems and
+                  From Riverhouse Belfast, Zymplify offers a free marketing consultation which aims to identify 
+                  digital marketing mistakes that are being made. Zymplify then aims to offer a solution using 
+                  our Digital Marketing Platform and explain how the platform can correct those problems and 
                   expand the businesses Digital Marketing endeavours.
                 </p>
               </div>
