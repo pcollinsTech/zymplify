@@ -2,7 +2,9 @@ body {
   font-family: 'Helvetica'
 }
 
-
+a{
+  text-decoration: none;
+}
 .home-header{
   align-content: center;
   max-width: 300px;

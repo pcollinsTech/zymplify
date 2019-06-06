@@ -51,7 +51,7 @@ const Item = props => {
           width: 100%;
           color: ${theme.text.color.primary};
         }
-
+       
         .item {
           border: 1px solid transparent;
           border-radius: ${theme.size.radius.default};
@@ -61,7 +61,12 @@ const Item = props => {
           width:360px;
           padding: 40px;
           h2{
+            text-decoration: none;
             margin-top: 15px;
+          }
+          p{
+
+            text-decoration: none;
           }
           :global(.gatsby-image-outer-wrapper) {
             border-radius: ${theme.size.radius.default};
