@@ -35,7 +35,7 @@ class ContactPage extends Component {
 
         </Layout>
 
-        <style jsx>{`
+        <style jsx="true">{`
         .main {
           padding: 70px 50px;
         }
