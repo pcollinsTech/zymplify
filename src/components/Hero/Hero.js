@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import hero from '../../images/50009502_2242236916019618_7563559900723281920_o.jpg'
-import Hero from "../Images/RiverhouseBelfast/Hero.js"
-const heroImage = {
-  width: "100%"
-}
+import Hero from "../Images/RiverhouseBelfast/HeroImage.js"
 
 class Hero extends Component {
 
