@@ -21,10 +21,10 @@ export default () => {
             <p className="page-links"><Link to="/contact">Contact</Link> | <Link to="/legal">Legal</Link> | <Link to="/blog">Blog</Link></p>
             <p>Copyright 2019 Zymplify, Inc</p>
             <div className="font-grey social-links">
-              <a href="https://facebook.com/Zymplify/" target="__blank"><FaFacebook /></a>
-              <a href="https://www.instagram.com/zymplify/" target="__blank"><FaInstagram /></a>
-              <a href="https://twitter.com/Zymplify_CMP" target="__blank"><FaTwitter /></a>
-              <a href="https://linkedin.com/company/zymplify/" target="__blank"><FaLinkedin /></a>
+              <a href="https://facebook.com/Zymplify/" target="__blank" aria-label="Facebook"><FaFacebook /></a>
+              <a href="https://www.instagram.com/zymplify/" target="__blank" aria-label="Instagram"><FaInstagram /></a>
+              <a href="https://twitter.com/Zymplify_CMP" target="__blank" aria-label="Twitter"><FaTwitter /></a>
+              <a href="https://linkedin.com/company/zymplify/" target="__blank" aria-label="Linkedin"><FaLinkedin /></a>
             </div>
             </div>
           </div>
