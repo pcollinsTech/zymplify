@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import theme from '../../theme/theme.yaml'
 
 const Headline = props => {
   const { title, children } = props;
@@ -9,7 +10,7 @@ const Headline = props => {
       {title ? <h2>{title}</h2> : <h2>{children}</h2>}
 
       {/* --- STYLES --- */}
-      {/* <style jsx>{`
+      <style jsx>{`
         h2 {
           font-size: ${theme.font.size.xxl};
           text-align: center;
@@ -51,7 +52,7 @@ const Headline = props => {
             font-size: ${`calc(${theme.font.size.xl} * 1.4)`};
           }
         }
-      `}</style> */}
+      `}</style>
     </React.Fragment>
   );
 };

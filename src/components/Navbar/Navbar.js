@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby'
 import {
   Collapse,
   Navbar,
@@ -6,7 +7,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   Button,
 } from 'reactstrap';
 
@@ -36,21 +36,18 @@ export default class Example extends React.Component {
         style={{ backgroundColor: 'white'}}>
         <div className="container">
         
-          <div className="row">
-          
-          </div>
           <NavbarBrand href="/"><img src={logo} className="logo" alt="logo"/></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#about" className="nav-link">About</NavLink>
+                <Link to="#about" className="nav-link">About</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/blog" className="nav-link">Blog</NavLink>
+                <Link to="/blog" className="nav-link">Blog</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="/contact" className="nav-link">Contact</NavLink>
+                <Link to="/contact" className="nav-link">Contact</Link>
               </NavItem>
               <Button color="secondary"><a href="https://zymplify.com/register.php" target="__blank" className="button-link">Try for Free</a></Button>
               <Button color="info"><a href="https://zymplify.com/client-area/" target="__blank" className="button-link">Login</a></Button>

@@ -25,8 +25,10 @@ class BlogPage extends React.Component {
         <Layout>
 
         <div className="gap" />
+          <div className="row mt-5 pt-5">
 
           <Blog posts={posts} theme={theme} />
+          </div>
 
         <Seo />
         </Layout>

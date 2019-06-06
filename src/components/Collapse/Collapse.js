@@ -39,7 +39,7 @@ class Example extends Component {
             
           }
           .accord{
-            width: 80%;
+            width: 100%;
             padding: 10px;
             border: 1px #525D7D solid;
             cursor: pointer;

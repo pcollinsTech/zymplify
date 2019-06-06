@@ -44,7 +44,7 @@ const Blog = props => {
           .blog {
             display: flex;
             justify-content: space-between;
-            
+            flex-wrap: wrap;
           }
 
           
