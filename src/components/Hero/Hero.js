@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import hero from '../../images/hero.png'
+import hero from '../../images/50009502_2242236916019618_7563559900723281920_o.jpg'
 
 const heroImage = {
   width: "100%"
@@ -25,6 +25,7 @@ class Hero extends Component {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            color: white;
           }
         `}</style>
 

@@ -7,7 +7,15 @@ const Bodytext = props => {
 
   return (
     <React.Fragment>
-      <div className="bodytext" dangerouslySetInnerHTML={{ __html: content }} />
+      <div className="row">
+
+        <div className="container">
+
+          <div className="bodytext" dangerouslySetInnerHTML={{ __html: content }} />
+        
+        </div>
+      
+      </div>
 
      <style jsx>{`
         .bodytext {

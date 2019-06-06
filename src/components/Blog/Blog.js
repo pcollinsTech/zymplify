@@ -10,7 +10,7 @@ const Blog = props => {
       <React.Fragment>
         <div className="container">
           <Headline title="Blog" />
-          <div>
+          <div className="blog">
             {posts.map(post => {
               const { node } = post;
               return <Item key={node.slug} post={node} />;
@@ -36,6 +36,7 @@ const Blog = props => {
           .blog {
             display: flex;
             justify-content: space-between;
+            
           }
 
           

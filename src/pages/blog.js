@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Blog from "../components/Blog";
 import Seo from "../components/Seo";
 import theme from '../theme/theme.yaml'
+import Layout from "../components/Layout";
 
 
 class BlogPage extends React.Component {
@@ -21,12 +22,14 @@ class BlogPage extends React.Component {
 
 
     return <React.Fragment>
-        
+        <Layout>
+
         <div className="gap" />
 
           <Blog posts={posts} theme={theme} />
 
         <Seo />
+        </Layout>
 
         <style jsx>{`
           #container {
